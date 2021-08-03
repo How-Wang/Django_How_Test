@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title> Copy names </title>
+</head>
+
+<body>
+    <h1 id='h1'>please input</h1>
+    <textarea id=text_i_want rows='20' cols='50'>
+            word in textarea
+        </textarea>
+    <script>
+        h1  = document.getElementById('h1')
+        textInscript = document.getElementById('text_i_want')
+        textInscript.addEventListener('input', changeh1)
+        function changeh1(e){
+            h1.innerHTML = textInscript.value;
+            textInscript.innerHTML = textInscript.value;
+            // console.log(textInscript.innerHTML);
+        }
+        // console.log(textInscript);
+    </script>
+</body>
+
+</html>

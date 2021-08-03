@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title> Input name </title>
+</head>
+
+<body>
+    <h1>please input</h1>
+    <form method="post" action="/myapp/input">
+        {% csrf_token %}
+        <p> name:<input type="text" name='username'></p>
+        <p> passward:<input type="password" name = 'passward'></p>
+        <textarea id=text_i_want rows='5' cols='10'>
+            word in textarea
+        </textarea>
+        <p> <button type="submit"> sure!! </button>
+        <!--<script src='input.js'></script>-->
+        <script>
+            const textInscript = document.getElementById('text_i_want')
+            textInscript.addEventListener('click', e => {
+                console.log(textInscript)})
+                
+            console.log(textInscript);
+        </script>
+    </form>
+</body>
+
+</html>
