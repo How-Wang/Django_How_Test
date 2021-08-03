@@ -3,9 +3,9 @@ from django.http import HttpResponse
 
 # Create your views here.
 def say_hello_views(request):
-    # name = request.GET['name']
+    name = request.GET['name']
     # name = 'david'
-    return render(request,"say_hello.html" ) #,locals()
+    return render(request,"say_hello.html",locals())
     #return HttpResponse("hello")
 def input_show_name_views(request):
     if request.method == 'POST':
